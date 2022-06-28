@@ -78,24 +78,25 @@ class _GetImageState extends State<GetImage> {
           const SizedBox(
             height: 20,
           ),
-        Container(
-          height: 500,
-          margin: const EdgeInsets.only(top: 5, right: 10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: Theme.of(context).colorScheme.primary,
-              width: 1,
+        if (pickedImage != null)
+          Container(
+            height: 500,
+            margin: const EdgeInsets.only(top: 5, right: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: Theme.of(context).colorScheme.primary,
+                width: 1,
+              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.file(
+                pickedImage!,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.file(
-              pickedImage!,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
         const SizedBox(
           height: 20,
         ),

@@ -113,32 +113,6 @@ class _DropDownFeaturesState extends State<DropDownFeatures> {
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
           child: DropdownButton<String>(
             isExpanded: true,
-            value: dropdownValue1,
-            hint: const Text("Feature 1"),
-            icon: const Icon(Icons.arrow_drop_down),
-            elevation: 15,
-            // style: const TextStyle(color: Colors.deepPurple),
-            underline: Container(
-              height: 2,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            onChanged: (String? newValue) {
-              setState(() {
-                dropdownValue1 = newValue!;
-              });
-            },
-            items: feature1.map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-          child: DropdownButton<String>(
-            isExpanded: true,
             value: dropdownValue2,
             hint: const Text("Feature 1"),
             icon: const Icon(Icons.arrow_drop_down),
